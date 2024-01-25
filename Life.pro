@@ -5,9 +5,13 @@ QT += quick
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        cell.cpp \
         lifegame.cpp \
-        main.cpp
+        main.cpp \
+        model/cell.cpp \
+        model/colonydata.cpp \
+        model/colonytablemodel.cpp \
+        model/octocolony.cpp \
+        model/protocolony.cpp
 
 RESOURCES += qml.qrc
 
@@ -23,5 +27,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    cell.h \
-    lifegame.h
+    lifegame.h \
+    model/cell.h \
+    model/colonydata.h \
+    model/colonytablemodel.h \
+    model/octocolony.h \
+    model/protocolony.h
